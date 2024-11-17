@@ -6,7 +6,7 @@ int main ()
 {
 	int x = -8, y = 0;
 	
-	while(x <= 8)
+	while(x <= 3)
 	{
 		y = 0;
 		cout << "x: " << x << "\ty: " << y << endl;
