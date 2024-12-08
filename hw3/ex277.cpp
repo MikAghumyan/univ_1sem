@@ -1,39 +1,35 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int main()
+{
 	const int n_def = 50;
-	int i, n1, n2, s = 0, x[n_def], y[n_def];
+	int i, n, s = 0, x[n_def], y[n_def];
 
-	do{
-		cout << "n1[2," << n_def << "]: ";
-		cin >> n1;
-	}while(n1 < 2 || n1 > n_def);
+	do
+	{
+		cout << "n[2," << n_def << "]: ";
+		cin >> n;
+	} while (n < 2 || n > n_def);
 
-	for(i = 0; i < n1; ++i){
+	for (i = 0; i < n; ++i)
+	{
 		cout << "x[" << i << "]: ";
 		cin >> x[i];
 	}
 
-	do{
-		cout << "n2[2," << n_def << "]: ";
-		cin >> n2;
-	}while(n2 < 2 || n2 > n_def);
-
-	for(i = 0; i < n2; ++i){
+	for (i = 0; i < n; ++i)
+	{
 		cout << "y[" << i << "]: ";
 		cin >> y[i];
 	}
 
-	for(i = 0; i < n1; ++i){
+	for (i = 0; i < n; ++i)
+	{
 		s += (x[i] % 7) ? 0 : x[i];
-	}
-
-	for(i = 0; i < n2; ++i){
 		s += (y[i] % 7) ? 0 : y[i];
 	}
-
 	cout << "S: " << s << endl;
 
-	return(0);
+	return (0);
 }
