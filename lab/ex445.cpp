@@ -53,7 +53,7 @@ int main()
     }
 
     for (int i = 0; i < n; i++)
-        b[i] = a[i][i] * (i != n - i - 1) ? a[i][n - i - 1] : 1;
+        b[i] = a[i][i] * ((i == (n - 1 - i)) ? 1 : a[i][n - 1 - i]);
 
     for (int i = 0; i < n; i++)
         cout << b[i] << " ";
