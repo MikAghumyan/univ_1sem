@@ -35,7 +35,7 @@ int	main(void)
 
 	do
 	{
-		cout << "Enter the number of elements in the array (positive integer): ";
+		cout << "n: ";
 		cin >> n;
 	} while (n < 2);
 
