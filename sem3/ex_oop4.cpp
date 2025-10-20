@@ -9,8 +9,23 @@ class ArrClass
 	int size;
 
   public:
-	ArrClass(int *arr, int s) : arr(arr), size(s)
+	ArrClass(int s) : size(s)
 	{
+		arr = new int[size];
+		if (arr == NULL)
+		{
+			cerr << "Memory allocation failed" << endl;
+			exit(1);
+		}
+		for (int i = 0; i < size; i++)
+		{
+			cout << "arr[" << i << "]: ";
+			cin >> arr[i];
+		}
+	}
+	~ArrClass()
+	{
+		delete[] arr;
 	}
 	int negativeCount()
 	{
@@ -56,12 +71,7 @@ int	main(void)
 		cout << "size: ";
 		cin >> size;
 	} while (size < 2 || size > 100);
-	for (int i = 0; i < size; i++)
-	{
-		cout << "arr[" << i << "]: ";
-		cin >> arr[i];
-	}
-	ArrClass ac(arr, size);
+	ArrClass ac(size);
 	ac.printMaxMin();
 	return (0);
 }
