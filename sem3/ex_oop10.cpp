@@ -53,7 +53,7 @@ Patients::Patients()
 		cin >> patients[i].surname;
 		cout << "Age: ";
 		cin >> patients[i].age;
-		cout << "Status (0 - HEALTHY, 1 - SURGERED, 2 - AMBULATORY): ";
+		cout << "Status: ";
 		cin >> status_input;
 		patients[i].status = static_cast<e_patient_status>(status_input);
 		if (patients[i].status == HEALTHY && patients[i].age >= 18)
@@ -84,12 +84,8 @@ int Patients::count_surgered()
 
 	surgered_count = 0;
 	for (unsigned int i = 0; i < n; i++)
-	{
 		if (patients[i].status == SURGERED)
-		{
 			surgered_count++;
-		}
-	}
 	return (surgered_count);
 }
 
